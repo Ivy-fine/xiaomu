@@ -74,7 +74,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .vote {
   width: 100%;
   height: 100%;
@@ -91,4 +91,46 @@ export default {
   height: 100%;
   overflow: hidden;
 }
+.tablist{
+
+ dl{
+    width: 348px;
+  height: 71px;
+  margin: 0 auto;
+  background: #fff;
+  margin-bottom: 11px;
+   dt {
+    width: 44px;
+    flex-shrink: 0;
+    height: 44px;
+    margin-top: 9px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  dd {
+    flex: 1;
+    height: 71px;
+    padding-top: 10px;
+    font-size: 14px;
+    line-height: 150%;
+    padding-right: 13px;
+    div {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 7px;
+      .title {
+        font-size: 16px;
+      }
+    }
+  }
+ }
+}
+
 </style>

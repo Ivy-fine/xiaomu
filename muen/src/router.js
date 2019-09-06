@@ -44,6 +44,21 @@ const router = new Router({
       component: () => import('./views/group/group.vue')
     },
     {
+      path: '/gift',
+      name: 'gift',
+      component: () => import('./views/gift/gift.vue')
+    },
+    {
+      path: '/detail',
+      name: 'detail',
+      component: () => import('./views/gift/detail.vue')
+    },
+    {
+      path: '/shopcart',
+      name: 'shopcart',
+      component: () => import('./views/shopcart/shopcart.vue')
+    },
+    {
       path:'*',
       redirect:'/home'
     }

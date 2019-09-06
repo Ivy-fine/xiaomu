@@ -42,7 +42,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 .group {
   width: 100%;
   height: 100%;
@@ -109,6 +109,30 @@ export default {
   display: flex;
   overflow: auto;
   padding:6px 0; 
+  dl {
+  width: 20%;
+  margin:0 2.5%;
+  dt {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    background: #ccc;
+    margin-bottom: 7px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  dd {
+    height: 19px;
+    line-height: 150%;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
 }
 
 </style>

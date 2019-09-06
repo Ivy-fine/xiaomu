@@ -35,7 +35,7 @@ export default {
       },{
           icon:require('@/assets/icon.svg'),
           text:'小礼品',
-          path:'/vote'
+          path:'/gift'
       },{
           icon:require('@/assets/icon.svg'),
           text:'留言',
