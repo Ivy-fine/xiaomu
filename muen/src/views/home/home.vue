@@ -4,7 +4,7 @@
         <p class="title">沐恩muen</p>
       </Header>
       <comSwiper :imgUrl="imgUrl"></comSwiper>
-      <Nav></Nav>
+      <Nav :navlist="navlist"></Nav>
   </div>
 </template>
 
@@ -19,6 +19,39 @@ export default {
         img:require('@/assets/9.jpg')
       },{
         img:require('@/assets/10.jpg')
+      }],
+       navlist: [{
+          icon:require('@/assets/icon.svg'),
+          text:'沐恩动态',
+          path:'/vote'
+      },{
+          icon:require('@/assets/icon.svg'),
+          text:'个人动态',
+          path:'/vote'
+      },{
+          icon:require('@/assets/icon.svg'),
+          text:'代祷列表',
+          path:'/vote'
+      },{
+          icon:require('@/assets/icon.svg'),
+          text:'小礼品',
+          path:'/vote'
+      },{
+          icon:require('@/assets/icon.svg'),
+          text:'留言',
+          path:'/vote'
+      },{
+          icon:require('@/assets/icon.svg'),
+          text:'奉献',
+          path:'/vote'
+      },{
+          icon:require('@/assets/icon.svg'),
+          text:'投票',
+          path:'/vote'
+      },{
+          icon:require('@/assets/icon.svg'),
+          text:'小组',
+          path:'/group'
       }]
     }
   },

@@ -31,6 +31,19 @@ const router = new Router({
       component: () => import('./views/vote/vote.vue')
     },
     {
+      path: '/newvote',
+      name: 'newvote',
+      meta:{
+        required:true
+      },
+      component: () => import('./views/vote/newvote.vue')
+    },
+    {
+      path: '/group',
+      name: 'group',
+      component: () => import('./views/group/group.vue')
+    },
+    {
       path:'*',
       redirect:'/home'
     }

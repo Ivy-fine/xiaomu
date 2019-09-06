@@ -3,7 +3,7 @@
       <span v-for="(item,index) in sublist"
         :key="index"
         :class="{active:curIndex==index}"
-        @click="$emit('change',index)"
+        @click="changeInd(index)"
       >
         {{item.title}}
       </span>
@@ -12,9 +12,20 @@
 
 <script>
 export default {
+  data(){
+    return{
+      curIndex:0
+    }
+  },
     props:{
         sublist:Array,
-        curIndex:Number
+        change:Function
+    },
+    methods:{
+      changeInd(ind){
+        this.curIndex = ind;
+        this.change(ind)
+      }
     }
 }
 </script>

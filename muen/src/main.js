@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import { Message } from 'element-ui';
+import { Message,DatePicker,TimePicker,Select, Option } from 'element-ui';
 import Header from "@/components/Header/Header.vue"
 import comSwiper from "@/components/comSwiper/comSwiper.vue"
 import Subnav from "@/components/subnav/subnav.vue"
@@ -13,6 +13,10 @@ Vue.prototype.$message=Message
 Vue.component('comSwiper',comSwiper)
 Vue.component('Header',Header)
 Vue.component('Subnav',Subnav)
+Vue.use(DatePicker)
+Vue.use(TimePicker)
+Vue.use(Select)
+Vue.use(Option)
 new Vue({
   router,
   store,

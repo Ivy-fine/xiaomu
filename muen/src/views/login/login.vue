@@ -30,10 +30,11 @@ export default {
       let redirect = this.$route.query.redirect;
       if (res.code === 1) {
         localStorage.token = res.token;
+        localStorage.userId=res.userId;
         if (redirect) {
-          this.$router.push({ path: redirect });
+          this.$router.replace({ path: redirect });
         } else {
-          this.$router.push("/home");
+          this.$router.replace("/home");
         }
       } else if (res.code === -1) {
         this.$router.push({ path: "/register" });
