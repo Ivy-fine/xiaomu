@@ -1,17 +1,20 @@
 <template>
   <div class="detail">
       <Header></Header>
-      <comSwiper :imgUrl="$route.query.imgUrl"></comSwiper>
-    <p class="price">￥{{$route.query.price}}</p>
-    <p>精美礼品{{$route.query.desc}}</p>
-    <button @click="goShopcart">加入购物车</button>
+      <comSwiper :imgUrl="$route.query.item.imgUrl"></comSwiper>
+    <p class="price">￥{{$route.query.item.price}}</p>
+    <p>精美礼品{{$route.query.item.desc}}</p>
+    <button @click="goShopcart($route.query.item)">加入购物车</button>
   </div>
 </template>
 
 <script>
+import {mapMutations} from 'vuex'
 export default {
     methods:{
-        goShopcart(){
+        ...mapMutations(['setcartlist']),
+        goShopcart(item){
+            this.setcartlist(item)
             this.$router.push("/shopcart")
         }
     }

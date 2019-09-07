@@ -43,7 +43,7 @@ export default {
   },
   methods:{
       goDetail(item){
-          this.$router.push({path:"/detail",query:item})
+          this.$router.push({path:"/detail",query:{item}})
       }
   }
 };

@@ -14,7 +14,12 @@ export default {
   props: {
     img: String,
     classname: String,
-    callback:Function,
+    callback:{
+      type:Function,
+      default:()=>{
+        return function(){}
+      }
+    },
     item:Object
   }
 };

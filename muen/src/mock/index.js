@@ -7,6 +7,7 @@ Mock.mock("/giftlist","get",{
         "desc":"@ctitle",
         "price|5-50":0,
         "id":"@id",
-        "imgUrl|3":[{"img":"@image(100x100,@color)"}]
+        "imgUrl|3":[{"img":"@image(100x100,@color)"}],
+        "count":1
     }]
 })
