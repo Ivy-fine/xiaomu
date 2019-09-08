@@ -18,23 +18,25 @@
             :key="index"
             :name="item.name"
             :foods="item.foods"
+            :ind="index"
           ></menu-item>
         </div>
       </div>
     </div>
-    <p class="bottom">总价：￥sumPrice,总数：sunCoumt</p>
+    <p class="bottom">总价：￥ {{sumPrice}} , 总数：{{sumCount}}</p>
   </div>
 </template>
 
 <script>
 import BScroll from "better-scroll";
-import axios from "axios";
-import "@/mock";
+// import axios from "axios";
+// import "@/mock";
 import menuItem from "@/components/menuitem/menuitem.vue";
+import { mapState,mapActions,mapGetters } from 'vuex'
 export default {
   data() {
     return {
-      list: [],
+      // list: [],
       ind: 0,
       leftBs: null,
       rightBs: null,
@@ -45,16 +47,22 @@ export default {
   components: {
     menuItem
   },
-  created() {
-    axios.get("/getlist").then(res => {
-      this.list = res.data.goods;
-      this.$nextTick(() => {
+  async created() {
+    // axios.get("/getlist").then(res => {
+    //   this.list = res.data.goods;
+    //   this.$nextTick(() => {
+    //     this.init();
+    //     this.getScrollHeight()
+    //   });
+    // });
+    await this.getlist();
+    this.$nextTick(() => {
         this.init();
         this.getScrollHeight()
       });
-    });
   },
   methods: {
+    ...mapActions(['getlist']),
     init() {
       this.leftBs = new BScroll(".left", {
         click: true
@@ -71,7 +79,7 @@ export default {
     changeind(index) {
       this.ind = index;
       let children = this.$refs.rightlist.children;
-      this.rightBs.scrollToElement(children[index], 500);
+      this.rightBs.scrollToElement(children[index], 300);
     },
     getScrollHeight(){
       this.scrollHeight.push(this.scrollH)
@@ -84,6 +92,8 @@ export default {
     }
   },
   computed:{
+    ...mapState(['list']),
+    ...mapGetters(['sumPrice','sumCount']),
     curIndex(){
       for(let i=0;i<this.scrollHeight.length;i++){
         let h1=this.scrollHeight[i]
