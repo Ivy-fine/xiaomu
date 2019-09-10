@@ -3,7 +3,6 @@ class List extends Component {
     state = {}
     render() {
         let carlist = this.props.carlist;
-        
         let title = Object.keys(carlist)
         return (
             <div className="list">

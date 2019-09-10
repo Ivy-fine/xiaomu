@@ -1,24 +1,30 @@
 import React, { Component } from 'react';
 import List from "../../../components/List/List"
-import axios from 'axios'
-import '../../../mock/mock'
+import { connect } from 'react-redux'
+import {request_list} from '../../../store/action/action'
 class Find extends Component {
-    state = {
-        carlist:[]
-      }
-      componentDidMount(){
-        axios.get("/getlist").then(res=>{
-            // console.log(res.data);
-            this.setState({
-                carlist:res.data
-            })
-        })
+    state = { }
+    componentDidMount() {
+        this.props.loadlist()
     }
-    render() { 
-        return ( <div className="find">
-            <List carlist={this.state.carlist}></List>
-        </div> );
+    render() {
+        let {list} =this.props;
+        return (<div className="find">
+            <List carlist={list}></List>
+        </div>);
     }
 }
- 
-export default Find;
+
+export default connect(
+    (state) => {
+        return {
+            list:state.list
+        }
+    }, (dispatch) => {
+        return {
+            loadlist(){
+                dispatch(request_list())
+            }
+        }
+    }
+)(Find);

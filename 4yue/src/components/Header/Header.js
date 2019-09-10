@@ -28,6 +28,11 @@ class Header extends Component {
              showMore:false
          })
      }
+     componentWillUnmount(){
+         this.setState=()=>{
+             return;
+         }
+     }
     render() { 
         let {navlist} =this.props;
         // console.log(navlist);
