@@ -14,3 +14,18 @@ title.forEach(item=>{
 // console.log(data)
 
 Mock.mock("/getlist","get",data)
+
+Mock.mock("/login",({body})=>{
+    let {name,pwd} =JSON.parse(body) ;
+    if(name === 'fff' && pwd === "123"){
+        return {
+            code:1,
+            msg:'success'
+        }
+    }else{
+        return {
+            code:0,
+            msg:'failed'
+        }
+    }
+})

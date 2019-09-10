@@ -57,7 +57,7 @@ class Header extends Component {
            {
                this.state.showMore &&
                 <div className="mark" onClick={this.hide}>
-                <div className="more" onClick={(e)=>{e.stopPropagation()}}>
+                <div className={this.state.sticky ? "more moresticky":'more'} onClick={(e)=>{e.stopPropagation()}}>
                     <p>金融</p>
                     <p>车商城</p>
                 </div>

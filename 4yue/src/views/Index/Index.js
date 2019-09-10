@@ -1,48 +1,30 @@
 import React, { Component } from 'react';
 import Header from '../../components/Header/Header'
-import {Switch,Redirect,Route} from 'react-router-dom'
-import Home from "./Home/Home"
-import Find from "./Find/Find"
-import Forum from "./Forum/Forum"
-import Usedcar from "./Usedcar/Usedcar"
-import Service from "./Service/Service"
+import Routerview from "../../router/routerview"
 class Index extends Component {
     state = { 
         navlist:[{
             link:'/index/home',
-            text:'首页',
-            com:Home
+            text:'首页'
         },{
             link:'/index/find',
-            text:'找车',
-            com:Find
+            text:'找车'
         },{
             link:'/index/usedcar',
-            text:'二手车',
-            com:Usedcar
+            text:'二手车'
         },{
             link:'/index/forum',
-            text:'论坛',
-            com:Forum
+            text:'论坛'
         },{
             link:'/index/service',
-            text:'服务',
-            com:Service
+            text:'服务'
         }]
      }
     render() { 
+        let {childroutes} = this.props
         return ( <div>
             <Header navlist={this.state.navlist}></Header>
-            <Switch>
-                {
-                    this.state.navlist.map((item,index)=>{
-                        return (
-                            <Route path={item.link} component={item.com} key={index}></Route>
-                        )
-                    })
-                }
-                <Redirect from="/index" to="/index/home"></Redirect>
-            </Switch>
+            <Routerview routes={childroutes}></Routerview>
         </div> );
     }
 }
