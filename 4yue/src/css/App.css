@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+html,body,#root,.app{
+    width: 100%;
+    height: 100%;
+}
+.list .item ul li{
+    display:flex;
+    height: 50px;
+    line-height: 50px;
+}
+.list .item ul li .img{
+    width: 50px;
+    height: 50px;
+    padding:10px;
+}
+.list .item ul li .img img{
+    width: 100%;
+    height: 100%;
+}
+.list .item h5{
+    background: #eee;
+    line-height: 30px;
+    padding-left: 20px;
+}
+.letterNav{
+    position: fixed;
+    top: 110px;
+    right: 20px;
+    z-index: 0;
+}
