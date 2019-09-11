@@ -1,6 +1,7 @@
+import { SAVELIST } from '../../Type'
 let listReducer = function (state = [], action) {
     switch (action.type) {
-        case 'SAVELIST':
+        case SAVELIST:
             return action.list 
         default:
             return state

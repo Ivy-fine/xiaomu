@@ -1,9 +1,10 @@
+import {ADD,SUB} from '../../Type'
 let coutnReducer = function (state = 0, action) {
     switch (action.type) {
-        case 'ADD':
+        case ADD:
             state++;
             return state
-        case 'SUB':
+        case SUB:
             state--;
             return state
         default:

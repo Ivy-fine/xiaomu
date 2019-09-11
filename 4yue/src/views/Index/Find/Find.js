@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import List from "../../../components/List/List"
 import { connect } from 'react-redux'
-import {request_list} from '../../../store/action/action'
+import {getlist} from '../../../store/reducer/listReducer/listaction'
 class Find extends Component {
     state = { }
     componentDidMount() {
@@ -23,7 +23,7 @@ export default connect(
     }, (dispatch) => {
         return {
             loadlist(){
-                dispatch(request_list())
+                dispatch(getlist)
             }
         }
     }
