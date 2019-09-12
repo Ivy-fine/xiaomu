@@ -1,0 +1,23 @@
+.detail{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .detailcont{
+        &>div{
+            height: 260px;
+            border-radius: 10px;
+            background: #eee;
+            margin: 0 10px;
+        }
+        h4{
+            text-align: center;
+            line-height: 50px;
+            font-weight: normal;
+        }
+        p{
+            color: red;
+            text-align: center;
+        }
+    }
+}
