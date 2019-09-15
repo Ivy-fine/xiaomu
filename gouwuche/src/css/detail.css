@@ -1,0 +1,25 @@
+.detail{
+    display: flex;
+    flex-direction: column;
+}
+.detailcont{
+    flex: 1;
+    text-align: center;
+}
+.detailcont .count{
+    background: rgba(173, 137, 95, 0.815);
+    color: #fff;
+    margin: 0 22px;
+    border-radius: 25px;
+}
+.detailcont .count span{
+    margin: 0 20px;
+}
+.detailcont .img{
+    width: 100%;
+    height: 300px;
+    padding-top: 30px;
+}
+.detailcont p{
+    line-height: 50px;
+}

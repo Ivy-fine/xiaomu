@@ -1,0 +1,49 @@
+.classify{
+    display: flex;
+    flex-direction: column;
+}
+.classifycont{
+    flex: 1;
+    display: flex;
+}
+.left{
+    width: 80px;
+    border-right: 1px solid #ccc;
+    text-align: center;
+    line-height: 44px;
+}
+.left p{
+  border-left: 3px solid #fff;
+}
+.left p.active{
+  color:rgba(173, 137, 95, 0.815);
+  border-left: 3px solid rgba(173, 137, 95, 0.815);
+}
+.right{
+    flex: 1;
+    padding: 20px;
+}
+.right .ban{
+    width: 100%;
+    height: 100px;
+}
+.right .ban img{
+    width: 100%;
+    height: 100%;
+}
+.right .rightlist{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.right .rightlist dl{
+    width: 30%;
+    font-size: 12px;
+    text-align: center;
+}
+.right .rightlist dl dt{
+    padding: 10px;
+}
+.right .rightlist dl img{
+    width: 100%;
+}

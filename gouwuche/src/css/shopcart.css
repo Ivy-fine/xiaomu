@@ -1,0 +1,53 @@
+.shopcart{
+    display: flex;
+    flex-direction: column;
+}
+.cartlist{
+    flex: 1;
+}
+.cartlist dl{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    border-bottom: 1px solid #eee;
+}
+.cartlist dl dt{
+    width: 50px;
+    text-align: center;
+}
+.cartlist dl dd{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.cartlist dl dd img{
+    width: 80px;
+    height: 80px;
+}
+.cartlist dl dd .count{
+    padding-left: 10px;
+    flex: 1;
+}
+.cartlist dl dd .count span{
+    margin: 0 10px;
+}
+.cartlist dl dd .price{
+    width: 80px;
+    text-align: center;
+}
+.cartlist dl dd .price b{
+    font-weight: normal;
+}
+.cartlist dl dd p{
+    margin-bottom: 20px;
+}
+.bottom{
+    height: 44px;
+    line-height: 44px;
+    background:rgba(173, 137, 95, 0.815);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding:0 20px;
+  }
