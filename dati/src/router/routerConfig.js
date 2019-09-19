@@ -1,5 +1,6 @@
 import Home from '../views/home/home'
 import Exam from '../views/exam/exam'
+import List from '../views/list/list'
 const routes = [
     {
         path:'/home',
@@ -7,6 +8,9 @@ const routes = [
     },{
         path:'/exam',
         component:Exam
+    },{
+        path:'/list',
+        component:List
     },{
         path:'/',
         redirect:'/home'
