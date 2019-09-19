@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+html,body,#root,#root>div{
+  width: 100%;
+  height: 100%;
+}
+.header{
+  width: 100%;
+  display: flex;
+  line-height: 44px;
+  height: 44px;
+  padding: 0 20px;
+  background: dodgerblue;
+}
+.bottom{
+  height: 60px;
+  display: flex;
+  background: dodgerblue;
+  justify-content: space-around;
+  line-height: 60px;
+  color: #fff;
+}
+.header p{
+  flex: 1;
+  text-align: center;
+  color: #fff;
+}
+.header>div{
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: right;
+}
+.home .nav{
+  display: flex;
+  justify-content: space-around;
+}
+.home .nav span{
+  text-align: center;
+}
+.exam{
+  display: flex;
+  flex-direction: column;
+}
+.exam .main{
+  flex: 1;
+}
+.exam .main .topic{
+  padding: 10px;
+}
+.exam .main .options{
+  padding-left: 10px;
+  line-height: 40px;
+}
+.exam .main .options .content p{
+  display: flex;
+  align-items: center;
+}
+.exam .main .options .content span:nth-child(1){
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #eee;
+  margin-right: 10px;
+}
+.exam .main .options .content span.error{
+  background: red;
+}
+.exam .main .options .content span.correct{
+  background:green;
+}
+.mark{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  top:0;
+  left: 0;
+}
+.mark .dialog{
+  width: 300px;
+  height: 200px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 20px;
+}
